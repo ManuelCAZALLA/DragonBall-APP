@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DragonBall_APP" customModuleProvider="target">
+            <connections>
+                <outlet property="password" destination="Q8v-yO-gAj" id="r26-F5-6F9"/>
+                <outlet property="userName" destination="NRM-fs-Y8H" id="2mW-yV-SVl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo2 1" id="xI3-bG-Zci">
+                    <rect key="frame" x="-193" y="-73" width="586" height="925"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <stackView contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="iKB-MC-fXR">
+                    <rect key="frame" x="12" y="334" width="369" height="184"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2MU-ks-2zg">
+                            <rect key="frame" x="0.0" y="0.0" width="369" height="128"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="correo@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NRM-fs-Y8H" userLabel="Username">
+                                    <rect key="frame" x="0.0" y="0.0" width="369" height="64"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="64" id="pCN-hm-fG3"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" textContentType="email"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8v-yO-gAj" userLabel="Password">
+                                    <rect key="frame" x="0.0" y="64" width="369" height="64"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="64" id="vaP-u8-GYw"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="qe4-s0-crd">
+                            <rect key="frame" x="0.0" y="140" width="369" height="44"/>
+                            <subviews>
+                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvV-fH-DX2">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="64" id="aet-ML-fwk"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thJ-ec-BdK">
+                                    <rect key="frame" x="128.33333333333334" y="0.0" width="112.66666666666666" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="pHs-3K-8Dq"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Continuar">
+                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="continueButton:" destination="-1" eventType="touchUpInside" id="O0L-sM-mnt"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AdG-ho-sCD">
+                                    <rect key="frame" x="305" y="0.0" width="64" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="64" id="mwr-Q5-owy"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="iKB-MC-fXR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="nxx-C9-wim"/>
+                <constraint firstItem="iKB-MC-fXR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pgN-QA-v17"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iKB-MC-fXR" secondAttribute="trailing" constant="12" id="yb1-Tz-E6b"/>
+            </constraints>
+            <point key="canvasLocation" x="57.251908396946561" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fondo2 1" width="1080" height="1920"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
