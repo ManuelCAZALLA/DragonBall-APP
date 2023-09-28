@@ -3,4 +3,70 @@
    uuid = "6D7E7395-C856-4CDA-A30C-AC527E136C6C"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A812DEEA-1DE0-40F0-BEC8-54F75363A489"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DragonBall-APP/CustomCellTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "CustomCellTableViewCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41EE65B0-3E27-4381-BE18-67E20F0646BB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DragonBall-APP/Models/ConnectivityModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "createTask(for:using:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "41EE65B0-3E27-4381-BE18-67E20F0646BB - 463fee9f13313e88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DragonBall_APP.ConnectivityModel.createTask&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(for: Foundation.URLRequest, using: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, DragonBall_APP.ConnectivityModel.ConectivityError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DragonBall-APP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manuelcazallacolmenero/Desktop/DragonBall-APP/DragonBall-APP/Models/ConnectivityModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "165"
+                  endingLineNumber = "165"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "41EE65B0-3E27-4381-BE18-67E20F0646BB - ab01e1ed658fe087"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DragonBall_APP.ConnectivityModel.createTask&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(for: Foundation.URLRequest, using: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, DragonBall_APP.ConnectivityModel.ConectivityError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DragonBall-APP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manuelcazallacolmenero/Desktop/DragonBall-APP/DragonBall-APP/Models/ConnectivityModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "172"
+                  endingLineNumber = "172"
+                  offsetFromSymbolStart = "440">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

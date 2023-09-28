@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DragonBall_APP" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="Ti7-Fs-0hs" id="fCh-kG-Srz"/>
                 <outlet property="password" destination="Q8v-yO-gAj" id="r26-F5-6F9"/>
                 <outlet property="userName" destination="NRM-fs-Y8H" id="2mW-yV-SVl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -80,10 +81,19 @@
                         </stackView>
                     </subviews>
                 </stackView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ti7-Fs-0hs">
+                    <rect key="frame" x="171.66666666666666" y="401" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="cfN-pN-r2g"/>
+                        <constraint firstAttribute="height" constant="50" id="ta7-G1-pfR"/>
+                    </constraints>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="Ti7-Fs-0hs" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="TTB-6T-7dE"/>
+                <constraint firstItem="Ti7-Fs-0hs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="i5Z-tm-IuV"/>
                 <constraint firstItem="iKB-MC-fXR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="nxx-C9-wim"/>
                 <constraint firstItem="iKB-MC-fXR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pgN-QA-v17"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iKB-MC-fXR" secondAttribute="trailing" constant="12" id="yb1-Tz-E6b"/>

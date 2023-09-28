@@ -2,28 +2,66 @@
 //  HeroesListTableViewController.swift
 //  DragonBall-APP
 //
-//  Created by Manuel Cazalla Colmenero on 27/9/23.
+//  Created by Manuel Cazalla Colmenero on 28/9/23.
 //
 
 import UIKit
 
-
-
-class HeroesDataSource: NSObject, UITableViewDataSource {
-   private let heroes: [Heroe] = []
+class HeroesListTableViewController: UIViewController {
     
-    func tableView(
-        _ tableView: UITableView,
-        numberOfRowsInSection section: Int) -> Int {
+    @IBOutlet weak var tableView: UITableView!
+    var heroes: [Heroe]
+    
+    init(heroes: [Heroe]) {
+        self.heroes = heroes
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Dragon Ball Heroes"
+        
+        
+        tableView.register(UINib(nibName: "CustomCellTableViewCell", bundle: nil), forCellReuseIdentifier: "HeroCell")
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+}
+
+// MARK: - Table View DataSource
+
+
+extension HeroesListTableViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return heroes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeroCell", for: indexPath) as? CustomCellTableViewCell else {
+            return UITableViewCell()
+        }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
-        let hero = heroes[indexPath.row]
-       
+        let heroe = heroes[indexPath.row]
+        cell.configure(with: heroe)
+        
         return cell
+    }
+}
+
+
+// MARK: - Table View Delegate
+extension HeroesListTableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let heroe = heroes[indexPath.row]
+        // let detailViewController = HeroesDetailViewController(heroe: heroe)
+        //navigationController?.pushViewController(detailViewController, animated: true)
+        //tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

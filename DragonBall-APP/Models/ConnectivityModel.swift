@@ -12,6 +12,7 @@ final class ConnectivityModel {
         case unknow
         case malformedUrl
         case decodingFailed
+        case encodingFailed
         case noData
         case statusCode(code: Int?)
         case noToken
@@ -24,7 +25,19 @@ final class ConnectivityModel {
         return components
     }
     
-    private var token: String?
+    private var token: String? {
+        get {
+            if let token = LocalData.getToken() {
+                return token
+            }
+            return nil
+        }
+        set {
+            if let token = newValue {
+                LocalData.save(token: token)
+            }
+        }
+    }
     
     func login (
         user: String,
@@ -80,7 +93,6 @@ final class ConnectivityModel {
         }
     
     func getHeroes(
-        token: String,
         completion: @escaping (Result<[Heroe], ConectivityError>) -> Void) {
         var components = baseComponents
         components.path = "/api/heros/all"
@@ -89,6 +101,10 @@ final class ConnectivityModel {
             completion(.failure(.malformedUrl))
             return
         }
+            guard let token else {
+                completion(.failure(.noToken))
+                return
+            }
         
         
         
@@ -99,23 +115,76 @@ final class ConnectivityModel {
         request.httpMethod = "POST"
         request.httpBody = getAllHeroes.query?.data(using: .utf8)
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-           
-            guard error == nil else {
-                completion(.failure(.unknow))
-                return
-                
-            }
-            guard let data else {
-                completion(.failure( .noData))
-                return
-            }
-            guard let heroes = try? JSONDecoder().decode([Heroe].self, from: data) else {
-                completion(.failure(.decodingFailed))
-                return
-            }
-            completion(.success(heroes))
-        }
-        task.resume()
+            createTask(for: request,
+                       using: [Heroe].self,
+                       completion: completion)
     }
+    
+    func getTransformations(
+        for hero: Heroe,
+        completion: @escaping (Result<[Transformations], ConectivityError>) -> Void){
+            
+            var components = baseComponents
+            components.path = "/api/heros/tranformations"
+            
+            guard let  url = components.url else {
+                completion(.failure(.malformedUrl))
+                return
+                           
+            }
+            guard let token else {
+                completion(.failure(.noToken))
+                return
+            }
+            
+/*         let body = GetTransformationBody(id: hero.id)
+            
+            guard let ecodedBody = try? JSONEncoder().encode(body) else {
+                completion(.failure(.encodingFailed))
+                return
+            }
+            */
+            var urlComponents = URLComponents()
+            urlComponents.queryItems = [URLQueryItem(name: "id", value: hero.id)]
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            request.httpBody = urlComponents.query?.data(using: .utf8)
+            createTask(for: request,
+                       using: [Transformations].self,
+                       completion: completion)
+            
+        }
+        
+    func createTask<T: Decodable>(
+        for request: URLRequest,
+        using type: T.Type,
+        completion: @escaping (Result<T, ConectivityError>) -> Void) {
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                let result: Result<T, ConectivityError>
+                
+                defer {
+                    completion(result)
+                }
+                
+                guard error == nil else {
+                    result = .failure(.unknow)
+                    return
+                }
+                guard let data else {
+                    result = .failure(.noData)
+                    return
+                }
+                guard let resource = try? JSONDecoder().decode(type, from: data) else {
+                    result = .failure(.decodingFailed)
+                    return
+                }
+                result = .success(resource)
+            }
+            task.resume()
+    }
+    
+    
 }

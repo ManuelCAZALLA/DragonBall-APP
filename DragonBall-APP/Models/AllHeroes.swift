@@ -10,7 +10,7 @@ import Foundation
 struct Heroe: Decodable {
     let id: String
     let name: String
-    let description: String
+    let description: String?
     let favorite: Bool
-    let photo: URL
+    let photo: String
 }

@@ -11,51 +11,46 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    private let model = ConnectivityModel()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.activityIndicator.hidesWhenStopped = true
         
     }
     @IBAction func continueButton(_ sender: Any) {
-        
-        let model = ConnectivityModel()
+        self.activityIndicator.startAnimating()
         model.login(
             user: userName.text ?? "",
-            password: password.text ?? "")
-        { result in
+            password: password.text ?? ""
+        ) { [weak self] result in
+            
+           
+                self?.activityIndicator.stopAnimating()
+            
             
             switch result {
-                case let .success(token):
-                    
-                    model.getHeroes(token: token) { result in
+                case .success:
+                    self?.model.getHeroes() { [weak self] result in
                         switch result {
                             case let .success(heroes):
-                                let heroeTableView = HeroesDataSource()
-                               
-                                navigationController?.pushViewController([heroeTableView], animated: true)
+                                DispatchQueue.main.async {
+                                    let tableViewController = HeroesListTableViewController(heroes: heroes)
+                                    
+                                    self?.navigationController?.pushViewController(tableViewController, animated: true)
+                                    print("Debe navegar")
+                                }
                             case let .failure(error):
                                 print("Error \(error)")
-                                
                         }
-                }
-            case let .failure(error):
-                print("Error \(error)")
+                    }
+                case let .failure(error):
+                    print("Error \(error)")
             }
         }
-                        
     }
+    
 }
-            
-            
-            
-        
-        
-    
-    
-
-    
-
-    
-
-
