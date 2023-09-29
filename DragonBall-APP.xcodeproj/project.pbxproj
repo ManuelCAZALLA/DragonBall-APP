@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C527FEA2AC5D9DA008A76F6 /* DetailsHeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C527FE82AC5D9DA008A76F6 /* DetailsHeroViewController.swift */; };
+		3C527FEB2AC5D9DA008A76F6 /* DetailsHeroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C527FE92AC5D9DA008A76F6 /* DetailsHeroViewController.xib */; };
+		3C6047802AC71DFD00309D66 /* TransformationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C60477E2AC71DFD00309D66 /* TransformationDetailViewController.swift */; };
+		3C6047812AC71DFD00309D66 /* TransformationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C60477F2AC71DFD00309D66 /* TransformationDetailViewController.xib */; };
 		3C6F55C32ABCA9520072A0F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F55C22ABCA9520072A0F4 /* AppDelegate.swift */; };
 		3C6F55C52ABCA9520072A0F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F55C42ABCA9520072A0F4 /* SceneDelegate.swift */; };
 		3C6F55C72ABCA9520072A0F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F55C62ABCA9520072A0F4 /* ViewController.swift */; };
@@ -25,6 +29,8 @@
 		3CCAE25D2AC4ECE700C5D2FC /* UIImageView+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCAE25C2AC4ECE700C5D2FC /* UIImageView+Remote.swift */; };
 		3CCAE2602AC4FC7000C5D2FC /* HeroesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCAE25E2AC4FC7000C5D2FC /* HeroesListTableViewController.swift */; };
 		3CCAE2612AC4FC7000C5D2FC /* HeroesListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CCAE25F2AC4FC7000C5D2FC /* HeroesListTableViewController.xib */; };
+		3CEF759A2AC6313400B195ED /* TransformationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CEF75982AC6313400B195ED /* TransformationsViewController.xib */; };
+		3CEF759F2AC640BA00B195ED /* TransformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF759D2AC640BA00B195ED /* TransformationViewController.swift */; };
 		3CF9C1482AC1E136003A2EAD /* ConnectivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9C1472AC1E136003A2EAD /* ConnectivityModel.swift */; };
 		3CF9C14A2AC1F33D003A2EAD /* AllHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9C1492AC1F33D003A2EAD /* AllHeroes.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C527FE82AC5D9DA008A76F6 /* DetailsHeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeroViewController.swift; sourceTree = "<group>"; };
+		3C527FE92AC5D9DA008A76F6 /* DetailsHeroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsHeroViewController.xib; sourceTree = "<group>"; };
+		3C60477E2AC71DFD00309D66 /* TransformationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationDetailViewController.swift; sourceTree = "<group>"; };
+		3C60477F2AC71DFD00309D66 /* TransformationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformationDetailViewController.xib; sourceTree = "<group>"; };
 		3C6F55BF2ABCA9520072A0F4 /* DragonBall-APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DragonBall-APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6F55C22ABCA9520072A0F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C6F55C42ABCA9520072A0F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +79,8 @@
 		3CCAE25C2AC4ECE700C5D2FC /* UIImageView+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Remote.swift"; sourceTree = "<group>"; };
 		3CCAE25E2AC4FC7000C5D2FC /* HeroesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListTableViewController.swift; sourceTree = "<group>"; };
 		3CCAE25F2AC4FC7000C5D2FC /* HeroesListTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesListTableViewController.xib; sourceTree = "<group>"; };
+		3CEF75982AC6313400B195ED /* TransformationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformationsViewController.xib; sourceTree = "<group>"; };
+		3CEF759D2AC640BA00B195ED /* TransformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationViewController.swift; sourceTree = "<group>"; };
 		3CF9C1472AC1E136003A2EAD /* ConnectivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityModel.swift; sourceTree = "<group>"; };
 		3CF9C1492AC1F33D003A2EAD /* AllHeroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHeroes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +110,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C1BFA8C2AC5EA1F00581D85 /* DetailsHeroes */ = {
+			isa = PBXGroup;
+			children = (
+				3C527FE82AC5D9DA008A76F6 /* DetailsHeroViewController.swift */,
+				3C527FE92AC5D9DA008A76F6 /* DetailsHeroViewController.xib */,
+			);
+			path = DetailsHeroes;
+			sourceTree = "<group>";
+		};
+		3C527FE52AC5D8B1008A76F6 /* Views+Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C6F55F72ABCAD780072A0F4 /* Login */,
+				3C527FE62AC5D8EF008A76F6 /* HeroesList */,
+				3C527FE72AC5D93A008A76F6 /* HeroesCustomCell */,
+				3C1BFA8C2AC5EA1F00581D85 /* DetailsHeroes */,
+				3C60477D2AC6CB5200309D66 /* Transformations */,
+			);
+			path = "Views+Controllers";
+			sourceTree = "<group>";
+		};
+		3C527FE62AC5D8EF008A76F6 /* HeroesList */ = {
+			isa = PBXGroup;
+			children = (
+				3CCAE25E2AC4FC7000C5D2FC /* HeroesListTableViewController.swift */,
+				3CCAE25F2AC4FC7000C5D2FC /* HeroesListTableViewController.xib */,
+			);
+			path = HeroesList;
+			sourceTree = "<group>";
+		};
+		3C527FE72AC5D93A008A76F6 /* HeroesCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				3CCAE2582AC4D9AC00C5D2FC /* CustomCellTableViewCell.swift */,
+				3CCAE2592AC4D9AC00C5D2FC /* CustomCellTableViewCell.xib */,
+			);
+			path = HeroesCustomCell;
+			sourceTree = "<group>";
+		};
+		3C60477D2AC6CB5200309D66 /* Transformations */ = {
+			isa = PBXGroup;
+			children = (
+				3CEF759D2AC640BA00B195ED /* TransformationViewController.swift */,
+				3CEF75982AC6313400B195ED /* TransformationsViewController.xib */,
+			);
+			path = Transformations;
+			sourceTree = "<group>";
+		};
 		3C6F55B62ABCA9520072A0F4 = {
 			isa = PBXGroup;
 			children = (
@@ -122,18 +182,15 @@
 			isa = PBXGroup;
 			children = (
 				3CF9C1462AC1DFCE003A2EAD /* Models */,
-				3C6F55F72ABCAD780072A0F4 /* Login */,
 				3C6F55C22ABCA9520072A0F4 /* AppDelegate.swift */,
 				3C6F55C42ABCA9520072A0F4 /* SceneDelegate.swift */,
 				3C6F55C62ABCA9520072A0F4 /* ViewController.swift */,
 				3C6F55CB2ABCA9530072A0F4 /* Assets.xcassets */,
 				3C6F55CD2ABCA9530072A0F4 /* LaunchScreen.storyboard */,
-				3C6F55D02ABCA9530072A0F4 /* Info.plist */,
-				3CCAE2582AC4D9AC00C5D2FC /* CustomCellTableViewCell.swift */,
-				3CCAE2592AC4D9AC00C5D2FC /* CustomCellTableViewCell.xib */,
-				3CCAE25E2AC4FC7000C5D2FC /* HeroesListTableViewController.swift */,
-				3CCAE25F2AC4FC7000C5D2FC /* HeroesListTableViewController.xib */,
 				3CCAE25C2AC4ECE700C5D2FC /* UIImageView+Remote.swift */,
+				3C6F55D02ABCA9530072A0F4 /* Info.plist */,
+				3C60477E2AC71DFD00309D66 /* TransformationDetailViewController.swift */,
+				3C60477F2AC71DFD00309D66 /* TransformationDetailViewController.xib */,
 			);
 			path = "DragonBall-APP";
 			sourceTree = "<group>";
@@ -172,6 +229,7 @@
 				3CCAE2442AC41B1500C5D2FC /* Transformations.swift */,
 				3CCAE2462AC41E4000C5D2FC /* GetTrasformationsBody.swift */,
 				3CCAE2482AC43C4C00C5D2FC /* LocalData.swift */,
+				3C527FE52AC5D8B1008A76F6 /* Views+Controllers */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,6 +302,7 @@
 				TargetAttributes = {
 					3C6F55BE2ABCA9520072A0F4 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1500;
 					};
 					3C6F55D42ABCA9540072A0F4 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -280,11 +339,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6047812AC71DFD00309D66 /* TransformationDetailViewController.xib in Resources */,
 				3C6F55CF2ABCA9530072A0F4 /* LaunchScreen.storyboard in Resources */,
 				3CCAE25B2AC4D9AC00C5D2FC /* CustomCellTableViewCell.xib in Resources */,
 				3CCAE2612AC4FC7000C5D2FC /* HeroesListTableViewController.xib in Resources */,
 				3C6F55CC2ABCA9530072A0F4 /* Assets.xcassets in Resources */,
 				3C6F55FB2ABCADC70072A0F4 /* LoginViewController.xib in Resources */,
+				3CEF759A2AC6313400B195ED /* TransformationsViewController.xib in Resources */,
+				3C527FEB2AC5D9DA008A76F6 /* DetailsHeroViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,13 +373,16 @@
 			files = (
 				3C6F55FA2ABCADC70072A0F4 /* LoginViewController.swift in Sources */,
 				3CCAE2492AC43C4C00C5D2FC /* LocalData.swift in Sources */,
+				3C6047802AC71DFD00309D66 /* TransformationDetailViewController.swift in Sources */,
 				3CCAE2472AC41E4000C5D2FC /* GetTrasformationsBody.swift in Sources */,
 				3C6F55C72ABCA9520072A0F4 /* ViewController.swift in Sources */,
 				3CCAE25A2AC4D9AC00C5D2FC /* CustomCellTableViewCell.swift in Sources */,
 				3CCAE2452AC41B1500C5D2FC /* Transformations.swift in Sources */,
+				3CEF759F2AC640BA00B195ED /* TransformationViewController.swift in Sources */,
 				3CCAE25D2AC4ECE700C5D2FC /* UIImageView+Remote.swift in Sources */,
 				3C6F55C32ABCA9520072A0F4 /* AppDelegate.swift in Sources */,
 				3CF9C14A2AC1F33D003A2EAD /* AllHeroes.swift in Sources */,
+				3C527FEA2AC5D9DA008A76F6 /* DetailsHeroViewController.swift in Sources */,
 				3CF9C1482AC1E136003A2EAD /* ConnectivityModel.swift in Sources */,
 				3C6F55C52ABCA9520072A0F4 /* SceneDelegate.swift in Sources */,
 				3CCAE2602AC4FC7000C5D2FC /* HeroesListTableViewController.swift in Sources */,
@@ -487,6 +552,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YNAD5X38LN;
@@ -503,7 +570,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Manuelcazalla.DragonBall-APP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -514,6 +583,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YNAD5X38LN;
@@ -530,6 +601,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Manuelcazalla.DragonBall-APP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

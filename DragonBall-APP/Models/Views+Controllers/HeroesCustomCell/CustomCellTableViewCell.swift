@@ -12,7 +12,6 @@ class CustomCellTableViewCell: UITableViewCell {
     
     @IBOutlet weak var descriptionHero: UILabel!
     @IBOutlet weak var nameHero: UILabel!
-    
     @IBOutlet weak var imageHero: UIImageView!
     
     
@@ -29,4 +28,11 @@ class CustomCellTableViewCell: UITableViewCell {
         }
     }
     
+    func configure(with transformacion: Transformations) {
+        nameHero.text = transformacion.name
+        descriptionHero.text = transformacion.description
+        if let imageUrl = URL(string: transformacion.photo) {
+            imageHero.setImage(for: imageUrl)
+        }
+    }
 }

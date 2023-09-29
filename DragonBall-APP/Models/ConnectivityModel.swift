@@ -137,13 +137,7 @@ final class ConnectivityModel {
                 return
             }
             
-/*         let body = GetTransformationBody(id: hero.id)
-            
-            guard let ecodedBody = try? JSONEncoder().encode(body) else {
-                completion(.failure(.encodingFailed))
-                return
-            }
-            */
+
             var urlComponents = URLComponents()
             urlComponents.queryItems = [URLQueryItem(name: "id", value: hero.id)]
             

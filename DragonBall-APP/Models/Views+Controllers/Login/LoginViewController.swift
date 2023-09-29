@@ -27,10 +27,7 @@ class LoginViewController: UIViewController {
             user: userName.text ?? "",
             password: password.text ?? ""
         ) { [weak self] result in
-            
-           
-                self?.activityIndicator.stopAnimating()
-            
+            self?.activityIndicator.stopAnimating()
             
             switch result {
                 case .success:
@@ -40,8 +37,7 @@ class LoginViewController: UIViewController {
                                 DispatchQueue.main.async {
                                     let tableViewController = HeroesListTableViewController(heroes: heroes)
                                     
-                                    self?.navigationController?.pushViewController(tableViewController, animated: true)
-                                    print("Debe navegar")
+                                    self?.navigationController?.setViewControllers([tableViewController], animated: true)
                                 }
                             case let .failure(error):
                                 print("Error \(error)")
