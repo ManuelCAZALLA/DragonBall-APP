@@ -22,12 +22,19 @@ class LoginViewController: UIViewController {
         
     }
     @IBAction func continueButton(_ sender: Any) {
-        self.activityIndicator.startAnimating()
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
+        
         model.login(
             user: userName.text ?? "",
             password: password.text ?? ""
         ) { [weak self] result in
-            self?.activityIndicator.stopAnimating()
+           
+            DispatchQueue.main.async {
+                self?.activityIndicator.stopAnimating()
+            }
+            
             
             switch result {
                 case .success:

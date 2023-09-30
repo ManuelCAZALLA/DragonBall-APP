@@ -25,7 +25,6 @@ class DetailsHeroViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     private let model = ConnectivityModel()
-    var transformations = [Transformations]?.self
     
     func configure() {
         nameHero.text = heroes.name
@@ -45,16 +44,18 @@ class DetailsHeroViewController: UIViewController {
         model.getTransformations(for: heroes) { [weak self] result in
             switch result {
             case let .success(transformations):
-                DispatchQueue.main.async {
-                    let transformationsViewController = TransformationsViewController(transformations: transformations)
-                    self?.navigationController?.pushViewController(transformationsViewController, animated: true)
+                DispatchQueue.main.async { [weak self] in
+                    if let heroes = self?.heroes {
+                        let transformationsViewController = TransformationsViewController(heroes: heroes, transformations: transformations)
+                        self?.navigationController?.show(transformationsViewController, sender: nil)
+                    }
                 }
             case let .failure(error):
                 print("Error al obtener las transformaciones: \(error)")
             }
         }
-        
-        
     }
-            
+
 }
+            
+

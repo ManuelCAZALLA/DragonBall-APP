@@ -34,10 +34,10 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iUd-a6-s00">
-                    <rect key="frame" x="12" y="389" width="369" height="170"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="iUd-a6-s00">
+                    <rect key="frame" x="12" y="389" width="369" height="179"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -48,7 +48,7 @@
             <constraints>
                 <constraint firstItem="iUd-a6-s00" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="9dd-GL-RfG"/>
                 <constraint firstItem="iUd-a6-s00" firstAttribute="top" secondItem="Rs5-2b-sYb" secondAttribute="bottom" constant="12" id="Mca-Ru-Wt5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iUd-a6-s00" secondAttribute="bottom" constant="259" id="QB3-w0-xWU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iUd-a6-s00" secondAttribute="bottom" constant="250" id="QB3-w0-xWU"/>
                 <constraint firstItem="kYy-d8-JuB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="Sye-hg-1mL"/>
                 <constraint firstItem="Rs5-2b-sYb" firstAttribute="top" secondItem="kYy-d8-JuB" secondAttribute="bottom" constant="35" id="WDV-nO-TWV"/>
                 <constraint firstItem="Rs5-2b-sYb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="jny-3U-MKB"/>

@@ -59,7 +59,7 @@ extension HeroesListTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let heroe = heroes[indexPath.row]
         let detailViewController = DetailsHeroViewController(heroes: heroe)
-        navigationController?.setViewControllers([detailViewController], animated: true)
+        navigationController?.pushViewController(detailViewController, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
