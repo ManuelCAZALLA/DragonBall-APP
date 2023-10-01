@@ -9,7 +9,6 @@ import UIKit
 
 class TransformationsViewController: UIViewController {
    
-    
     @IBOutlet weak var transformationTableView: UITableView!
     
     var heroes: Heroe
@@ -21,19 +20,17 @@ class TransformationsViewController: UIViewController {
             super.init(nibName: nil, bundle: nil)
         }
    
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Transformaciones"
 
-        
         transformationTableView.dataSource = self
         transformationTableView.delegate = self
+        
         transformationTableView.register(
             UINib(nibName: "CustomCellTableViewCell",
             bundle: nil),
@@ -58,7 +55,6 @@ extension TransformationsViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        
         let transformation = transformations[indexPath.row]
         cell.configure(with: transformation)
         cell.accessoryType = .disclosureIndicator
@@ -78,8 +74,6 @@ extension TransformationsViewController: UITableViewDelegate {
         navigationController?.pushViewController(transformationDetails, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
         
-       
-        
-    }
+       }
     }
 

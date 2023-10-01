@@ -26,8 +26,6 @@ class HeroesListTableViewController: UIViewController {
         super.viewDidLoad()
         title = "Dragon Ball Heroes"
         
-      //  navigationItem.hidesBackButton = true
-        
         tableView.register(UINib(nibName: "CustomCellTableViewCell", bundle: nil), forCellReuseIdentifier: "HeroCell")
         
         tableView.dataSource = self
@@ -37,12 +35,19 @@ class HeroesListTableViewController: UIViewController {
 
 // MARK: - Table View DataSource
 extension HeroesListTableViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int) -> Int {
         return heroes.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeroCell", for: indexPath) as? CustomCellTableViewCell else {
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+            guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "HeroCell",
+            for: indexPath) as? CustomCellTableViewCell else {
             return UITableViewCell()
         }
         
@@ -56,7 +61,10 @@ extension HeroesListTableViewController: UITableViewDataSource {
 
 // MARK: - Table View Delegate
 extension HeroesListTableViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath) {
+        
         let heroe = heroes[indexPath.row]
         let detailViewController = DetailsHeroViewController(heroes: heroe)
         navigationController?.pushViewController(detailViewController, animated: true)

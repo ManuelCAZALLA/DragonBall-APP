@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Transformations: Decodable {
+struct Transformations: Codable, Equatable {
     let id: String
     let name: String
     let description: String?

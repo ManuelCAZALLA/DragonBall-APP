@@ -8,13 +8,11 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private let model = ConnectivityModel()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,20 +20,17 @@ class LoginViewController: UIViewController {
         
     }
     @IBAction func continueButton(_ sender: Any) {
+        
         DispatchQueue.main.async {
             self.activityIndicator.startAnimating()
         }
-        
         model.login(
             user: userName.text ?? "",
             password: password.text ?? ""
         ) { [weak self] result in
-           
-            DispatchQueue.main.async {
+           DispatchQueue.main.async {
                 self?.activityIndicator.stopAnimating()
             }
-            
-            
             switch result {
                 case .success:
                     self?.model.getHeroes() { [weak self] result in
@@ -55,5 +50,6 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
     
 }

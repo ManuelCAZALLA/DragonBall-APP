@@ -38,6 +38,11 @@ final class ConnectivityModel {
             }
         }
     }
+    private let session: URLSession
+    
+    init(session: URLSession = .shared){
+        self.session = session
+    }
     
     func login (
         user: String,
@@ -62,7 +67,7 @@ final class ConnectivityModel {
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
-            let task = URLSession.shared.dataTask(with: request) {[weak self] data, response, error in
+            let task = session.dataTask(with: request) {[weak self] data, response, error in
                 guard error == nil else {
                     completion(.failure(.unknow))
                     return
@@ -156,7 +161,7 @@ final class ConnectivityModel {
         using type: T.Type,
         completion: @escaping (Result<T, ConectivityError>) -> Void) {
             
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            let task = session.dataTask(with: request) { data, response, error in
                 let result: Result<T, ConectivityError>
                 
                 defer {

@@ -27,22 +27,16 @@ class TransformationDetailViewController: UIViewController {
     private let model = ConnectivityModel()
    
     func configure() {
-        nameTransformations.text = transformation.name // Asegúrate de que la estructura Transformations tenga una propiedad 'name'
-        descriptionTransformations.text = transformation.description // Asegúrate de que la estructura Transformations tenga una propiedad 'description'
-        if let imageUrl = URL(string: transformation.photo) { // Asegúrate de que la estructura Transformations tenga una propiedad 'photo'
+        nameTransformations.text = transformation.name
+        descriptionTransformations.text = transformation.description
+        if let imageUrl = URL(string: transformation.photo) {
             imageTansformations.setImage(for: imageUrl)
         }
     }
 
-        
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
-    
-
-        
 }
 
