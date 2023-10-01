@@ -171,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				3CF9C1462AC1DFCE003A2EAD /* Models */,
+				3C527FE52AC5D8B1008A76F6 /* Views+Controllers */,
 				3C6F55C22ABCA9520072A0F4 /* AppDelegate.swift */,
 				3C6F55C42ABCA9520072A0F4 /* SceneDelegate.swift */,
 				3C6F55C62ABCA9520072A0F4 /* ViewController.swift */,
@@ -207,7 +208,6 @@
 				3CCAE2442AC41B1500C5D2FC /* Transformations.swift */,
 				3CCAE2462AC41E4000C5D2FC /* GetTrasformationsBody.swift */,
 				3CCAE2482AC43C4C00C5D2FC /* LocalData.swift */,
-				3C527FE52AC5D8B1008A76F6 /* Views+Controllers */,
 			);
 			path = Models;
 			sourceTree = "<group>";
