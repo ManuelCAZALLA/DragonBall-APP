@@ -8,6 +8,7 @@
 import UIKit
 
 class HeroesListTableViewController: UIViewController {
+   
     
     @IBOutlet weak var tableView: UITableView!
     var heroes: [Heroe]
@@ -30,6 +31,8 @@ class HeroesListTableViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        
     }
 }
 

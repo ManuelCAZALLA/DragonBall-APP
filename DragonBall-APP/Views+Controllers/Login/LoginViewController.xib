@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -27,10 +26,10 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <stackView contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="iKB-MC-fXR">
-                    <rect key="frame" x="12" y="334" width="369" height="184"/>
+                    <rect key="frame" x="12" y="329" width="369" height="194"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2MU-ks-2zg">
-                            <rect key="frame" x="0.0" y="0.0" width="369" height="128"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2MU-ks-2zg">
+                            <rect key="frame" x="0.0" y="0.0" width="369" height="138"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="correo@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NRM-fs-Y8H" userLabel="Username">
                                     <rect key="frame" x="0.0" y="0.0" width="369" height="64"/>
@@ -41,7 +40,7 @@
                                     <textInputTraits key="textInputTraits" textContentType="email"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8v-yO-gAj" userLabel="Password">
-                                    <rect key="frame" x="0.0" y="64" width="369" height="64"/>
+                                    <rect key="frame" x="0.0" y="74" width="369" height="64"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="64" id="vaP-u8-GYw"/>
                                     </constraints>
@@ -51,7 +50,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="qe4-s0-crd">
-                            <rect key="frame" x="0.0" y="140" width="369" height="44"/>
+                            <rect key="frame" x="0.0" y="150" width="369" height="44"/>
                             <subviews>
                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvV-fH-DX2">
                                     <rect key="frame" x="0.0" y="0.0" width="64" height="44"/>
