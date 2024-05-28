@@ -28,27 +28,25 @@ class LoginViewController: UIViewController {
             user: userName.text ?? "",
             password: password.text ?? ""
         ) { [weak self] result in
-          
+            
             switch result {
-                case .success:
-                    self?.model.getHeroes() { [weak self] result in
-                        switch result {
-                            case let .success(heroes):
-                                DispatchQueue.main.async {
-                                    self?.activityIndicator.stopAnimating()
-                                    let tableViewController = HeroesListTableViewController(heroes: heroes)
-                                    
-                                    self?.navigationController?.setViewControllers([tableViewController], animated: true)
-                                }
-                            case let .failure(error):
-                                print("Error \(error)")
+            case .success:
+                self?.model.getHeroes() { [weak self] result in
+                    switch result {
+                    case let .success(heroes):
+                        DispatchQueue.main.async {
+                            self?.activityIndicator.stopAnimating()
+                            let tableViewController = HeroesListTableViewController(heroes: heroes)
+                            
+                            self?.navigationController?.setViewControllers([tableViewController], animated: true)
                         }
+                    case let .failure(error):
+                        print("Error \(error)")
                     }
-                case let .failure(error):
-                    print("Error \(error)")
+                }
+            case let .failure(error):
+                print("Error \(error)")
             }
         }
     }
-    
-    
 }
